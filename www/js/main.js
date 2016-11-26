@@ -6,14 +6,17 @@ var config = {
 	storageBucket: "mercysmart-eb1c6.appspot.com",
 	messagingSenderId: "1032463194214"
 };
+var database = firebase.database();
 firebase.initializeApp(config);
 
-var database = firebase.database();
+	
 var date = new Date(),
     year = date.getFullYear(),
     month = date.getMonth() + 1,
     day = date.getDate(),
     right_now = year + '-' + month + '-' + day;
+
+var	child = firebase.database().ref(right_now).push().key;
 
 function submit() {
 	'use strict';
@@ -22,8 +25,7 @@ function submit() {
 		grade = $('#class').val(),
 		matpel = $('#subject').val();
 
-	var today = firebase.database().ref('agenda/' + right_now);
-	today.push().set({
+	child.push().set({
 		id: id,
 		kelas: grade,
 		mata_pelajaran: matpel
