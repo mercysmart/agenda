@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+    <script src="js/main.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body align="center">
+    <h1>Agenda Siswa</h1>
+    <hr>
+    <div class="form">
+        <input type="text" placeholder="ID Siswa" id="id">
+        <select id="class">
+            <option disabled selected>Kelas Siswa</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="subject">
+            <option disabled selected>Mata Pelajaran Siswa</option>
+            <option value="pkn">PKn</option>
+            <option value="ipa">IPA</option>
+            <option value="ips">IPS</option>
+            <option value="math">Matematika</option>
+            <option value="bindo">Bahasa Indonesia</option>
+            <option value="bing">Bahasa Inggris</option>
+            <option value="kim">Kimia</option>
+            <option value="fisik">Fisika</option>
+            <option value="biolo">Biologi</option>
+            <option value="geogra">Geografi</option>
+            <option value="geogra">Sosiologi</option>
+            <option value="geogra">Ekonomi</option>
+        </select>
+        <br><br>
+        <button class="button button-outline" onclick="submit()">Submit</button>
+    </div>
+</body>
+</html>
